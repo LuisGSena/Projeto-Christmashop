@@ -1,0 +1,114 @@
+<div class="allProductsMain">
+    {{>_navbarAdmin}}
+    <section id="allProductsHomeAdmin">
+        <div id="infoProductsHomeAdmin">
+            <p>Produtos</p>
+            <div id="details_infoProducts">
+                <p>Valor</p>
+                <p>Quantidade</p>
+            </div>
+        </div>
+        <div id="allProductsFromDatabase">
+            {{#each allProducts}}
+            <div class="product-item-from-database">
+                <div class="product-item-img">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: .5em;">
+                        <img src="/img/editar-icon.png"
+                            onclick="preencherFormulario({idProduto: '{{idProduto}}', nomeProduto: '{{nomeProduto}}', descricao: '{{descricao}}', qntdestoque: '{{qntdestoque}}', valorunidade: '{{valorunidade}}'})"
+                            class="open-modal" alt="Foto de edição">
+                        <img src="/img/remover-icon.png"
+                            onclick="preencherFormulario({idProduto: '{{idProduto}}', nomeProduto: '{{nomeProduto}}', descricao: '{{descricao}}', qntdestoque: '{{qntdestoque}}', valorunidade: '{{valorunidade}}'})"
+                            class="open-modal-delete" alt="Foto de remoção">
+                    </div>
+                    <img src="/img/arvore.png" alt="Foto de Árvore de Natal">
+                </div>
+                <div class="product-item-name-desc">
+                    <h3>{{nomeProduto}}</h3>
+                    <h5>{{descricao}}</h5>
+                </div>
+                <div class="product-item-value-qntd">
+                    <h3>R$ {{valorunidade}}</h3>
+                    <h3>{{qntdestoque}}</h3>
+                </div>
+            </div>
+            {{else}}
+            <h1>Nenhum produto cadastrado no momento...</h1>
+            {{/each}}
+        </div>
+    </section>
+    <div id="fade" class="hide"></div>
+    <div id="modal" class="hide">
+        <div class="modal-header">
+            <h2>Editar Produto</h2>
+            <img src="/img/marca-x.png" id="close-modal" onclick="cleanFormulario()">
+        </div>
+        <div class="modal-body">
+            <div class="edit-product">
+                <div class="edit-product-upload">
+                    <div class="edit-img-upload">
+                        <img src="/img/arvore.png" alt="">
+                        <p style="text-align: center;">arvore de natal</p>
+                    </div>
+                </div>
+                <div>
+                    <form action="/admin/editar-produto" class="edit-product-form" method="post">
+                        <input type="hidden" value="" name="idProduto" id="idProdutoForm">
+                        <label for="name-edit">Nome:</label>
+                        <input type="text" id="name-edit" name="nomeProduto">
+                        <label for="descricao-edit">Descrição:</label>
+                        <input type="text" id="descricao-edit" name="descricao">
+                        <label for="quantidade-edit">Quantidade:</label>
+                        <input type="number" id="quantidade-edit" name="qntdestoque">
+                        <label for="categoria">Categoria:</label>
+                        <select name="categoria" id="categoria">
+                            <option value="presentes">Presentes</option>
+                            <option value="decoracao">Decoração</option>
+                            <option value="cartoes_de_natal">Cartões de Natal</option>
+                        </select>
+                        <label for="valor-edit">Valor:</label>
+                        <input type="text" id="valor-edit" name="valorunidade">
+                        <button type="submit" class="edit-product-save">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fadeDelete" class="hideDelete"></div>
+    <div id="modalDelete" class="hideDelete">
+        <div class="modal-header">
+            <h2 style="margin-top: 1em;">Você quer deletar este produto? </h2>
+            <img src="/img/marca-x.png" id="close-modal-delete" onclick="cleanFormularioDelete()">
+        </div>
+        <div class="modal-body">
+            <div class="edit-product">
+                <div class="edit-product-upload">
+                    <div class="edit-img-upload">
+                        <img src="/img/arvore.png" alt="">
+                        <p style="text-align: center;">arvore de natal</p>
+                    </div>
+                </div>
+                <div>
+                    <form action="/admin/deletar-produto" class="edit-product-form" method="post">
+                        <input type="hidden" value="" name="idProduto" id="idProdutoForm">
+                        <label for="name-edit">Nome:</label>
+                        <input type="text" id="name-edit" name="nomeProduto" disabled>
+                        <label for="descricao-edit">Descrição:</label>
+                        <input type="text" id="descricao-edit" name="descricao" disabled>
+                        <label for="quantidade-edit">Quantidade:</label>
+                        <input type="number" id="quantidade-edit" name="qntdestoque" disabled>
+                        <label for="categoria">Categoria:</label>
+                        <select name="categoria" id="categoria" disabled>
+                            <option value="Presentes">Presentes</option>
+                            <option value="Decoração">Decoração</option>
+                            <option value="Cartões de Natal">Cartões de Natal</option>
+                        </select>
+                        <label for="valor-edit">Valor:</label>
+                        <input type="text" id="valor-edit" name="valorunidade" disabled>
+                        <button type="submit" class="edit-product-save">Deletar produto</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

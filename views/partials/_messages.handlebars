@@ -1,0 +1,17 @@
+{{#if success_msg}}
+    <div style="display: flex; background-color: rgba(6, 131, 6, 0.59); font-size: 1em; padding: 1.5em; color: white; align-itens: center; justify-content: center;">
+        <p>{{success_msg}}</p>
+    </div>
+{{/if}}
+
+{{#if error_msg}}
+    <div style="display: flex; background-color: rgba(212, 24, 24, 0.59); font-size: 1em; padding: 1.5em; color: white; align-itens: center; justify-content: center;">
+        <p>{{error_msg}}</p>
+    </div>
+{{/if}}
+
+{{#if error}}
+    <div style="display: flex; background-color: rgba(212, 24, 24, 0.59); font-size: 1em; padding: 1.5em; color: white; align-itens: center; justify-content: center;">
+        <p>{{error}}</p>
+    </div>
+{{/if}}

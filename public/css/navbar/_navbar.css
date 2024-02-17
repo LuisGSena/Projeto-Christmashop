@@ -1,0 +1,81 @@
+#navbar {
+    background-color: #BC1823;
+    padding: .4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1.8em;
+}
+
+#navbar img{
+    width: 8em;
+}
+
+#second_content_navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    color: white;
+    margin-top: .2em;
+}
+
+#second_content_navbar .link_navbar{
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .3s ease;
+}
+
+#second_content_navbar .link_navbar:hover{
+    border-bottom: 2px solid white;
+}
+
+#perfil_navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#perfil_navbar .link_navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#perfil_navbar .link_navbar:hover{
+    border-bottom: 2px solid transparent;
+}
+
+#perfil_navbar .link_navbar p {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .3s ease;
+}
+
+#perfil_navbar .link_navbar:hover p {
+    border-bottom: 2px solid white;
+}
+
+#perfil_navbar .link_navbar img{
+    margin-top: .4em;
+    width: 1.5em;
+}
+
+#link_cadastro_navbar {
+    border: 3px solid white;
+    color: white;
+    text-decoration: none;
+    padding: .25em;
+    padding-inline: 1.4em;
+    border-radius: .4em;
+    transition: color .15s ease;
+    transition: background-color .3s ease;
+}
+
+#link_cadastro_navbar:hover {
+    background-color: white;
+    color: #BC1823;
+}

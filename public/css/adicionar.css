@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Inter;
+}
+
+.new-product-container{
+    width: 100%;
+    display: flex;
+}
+.new-product-home-admin {
+    width: 77%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    max-height: 100vh;
+}
+.new-product-home-admin h1{
+    margin-block: 1em;
+}
+.card-new-product{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1em;
+    padding-right: 5em;
+    height: 75%;
+    width: 75%;
+    background-color: white;
+}
+.image-new-product{
+
+    padding: 6em;
+    border-radius: 1em;
+    background-color: #D9D9D9 ;
+}
+
+.new-product-form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.new-product-form input,select{
+
+    background-color: white;
+    border: 1px solid black;
+    width: 100%;
+    border-radius: .4em;
+    padding: .3em;
+}
+
+.new-product-form button{
+    color: white;
+    background-color: #BC1823;
+    padding: .5em;
+    border: 1px solid #BC1823;
+    width: 50%;
+    border-radius: .6em;
+    margin-top: 1.3em;
+}

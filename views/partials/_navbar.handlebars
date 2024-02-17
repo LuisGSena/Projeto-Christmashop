@@ -1,0 +1,70 @@
+{{#if user}}
+<header class="header-logged">
+    <div class="list-header-navbar">
+        <a href="/"><img class="logo-header" src="/img/Logo.png" alt="Imagem da Logo"></a>
+        <div>
+            {{#if user.adm}}
+            <a href="/admin">
+                <p style="margin-right: 1em;">Painel Administrativo</p>
+            </a>
+            {{else}}
+            <a href="/logout">
+                <p style="margin-right: 1em;">Sair</p>
+            </a>
+            {{/if}}
+            <a href="/carrinho">
+                <img src="/img/carrinho.png" alt="">
+                <p>Carrinho</p>
+            </a>
+            <a href="/favoritos">
+                <img src="/img/favoritos.png" alt="">
+                <p>Favoritos</p>
+            </a>
+            <a href="/meu-perfil">
+                <img src="/img/perfil.png" alt="">
+                <p>{{user.nome}}</p>
+            </a>
+        </div>
+    </div>
+    <div class="select-options-header">
+        <div class="options-header">
+            <a href="#produtos-mais-vendidos">Principal</a>
+        </div>
+        <div class="options-header select-header">
+            <a href="#artigos-de-decoracao">Artigos De Decoração</a>
+        </div>
+        <div class="options-header">
+            <a href="#presentes-personalizados">Presentes Personalizados</a>
+        </div>
+    </div>
+</header>
+{{else}}
+<nav id="navbar">
+    <a href="/">
+        <img src="/img/navbar/logo.png" alt="Logo da Notions">
+    </a>
+    <div id="second_content_navbar">
+        {{#if presentes_personalizados}}
+        <a class="link_navbar" href="/presentes-personalizados" style="border-bottom: 2px solid white;">Presentes
+            Personalizados</a>
+        <a class="link_navbar" href="/artigos-de-decoracao">Artigos de Decoração</a>
+        {{else}}
+        {{#if artigos_de_decoracao}}
+        <a class="link_navbar" href="/presentes-personalizados">Presentes Personalizados</a>
+        <a class="link_navbar" href="/artigos-de-decoracao" style="border-bottom: 2px solid white;">Artigos de
+            Decoração</a>
+        {{else}}
+        <a class="link_navbar" href="/presentes-personalizados">Presentes Personalizados</a>
+        <a class="link_navbar" href="/artigos-de-decoracao">Artigos de Decoração</a>
+        {{/if}}
+        {{/if}}
+        <a href="/cadastro" id="link_cadastro_navbar">Criar Conta</a>
+        <div id="perfil_navbar">
+            <a class="link_navbar" href="/login">
+                <img src="/img/navbar/profile_default_picture.png" alt="Foto de Perfil">
+                <p>Fazer Login</p>
+            </a>
+        </div>
+    </div>
+</nav>
+{{/if}}

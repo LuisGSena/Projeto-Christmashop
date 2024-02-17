@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.cabecalho{
+    background-color: #BC1823;
+    color: white;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.opcao{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home-options {
+    text-decoration: none;
+}

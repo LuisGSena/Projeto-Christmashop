@@ -1,0 +1,131 @@
+<header id="header-home-logado">
+
+</header>
+<section class="sections-home">
+    <h1 id="produtos-mais-vendidos">Produtos mais vendidos: </h1>
+    <div class="all_products_section">
+        {{#each produtos_mais_vendidos}}
+        <div class="products_sections_home">
+            <a class="link_product">
+                <div class="product-box">
+                    <img src="/img/products/product_{{idProduto}}.png" alt="Imagem do Produto 1">
+                    <div>
+                        <h2>{{nomeProduto}} <br> {{descricao}}</h2>
+                        <p class="estoque">{{qntdestoque}} Produtos em estoque</p>
+                        <h2 class="preco">R$ {{valorunidade}}</h2>
+                        <p class="frete">Frete Grátis</p>
+                        <div class="carrinho-favoritos" style="display: flex; align-items: center;
+                        justify-content: space-between;">
+                            <img src="/img/carrinho-contorno.png" class="carrinho_vazio" alt="Foto do carrinho"
+                                id="carrinho{{idProduto}}" style="width: 2em;" onclick="addCarrinho({idProduto: '{{idProduto}}', nomeProduto: '{{nomeProduto}}', descricao: '{{descricao}}', qntdestoque: '{{qntdestoque}}', valorunidade: '{{valorunidade}}'})">
+                            <img src="/img/carrinho_full.png" class="hideElement carrinho_full" alt="Foto do carrinho"
+                                id="carrinho{{idProduto}}" style="width: 2em;">
+                            <img src="/img/contorno-coracao.png" class="favorito_vazio" alt="Foto do Favoritos"
+                                id="favorito{{idProduto}}" style="width: 2em;">
+                            <img src="/img/coracao_full.png" alt="Foto do Favoritos" class="hideElement favorito_full"
+                                id="favorito{{idProduto}}" style="width: 2em;">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{else}}
+        <h4>Nenhum produto de decoração adicionado...</h4>
+        {{/each}}
+    </div>
+</section>
+
+<section class="sections-home">
+    <h1 id="artigos-de-decoracao">Artigos de decoração: </h1>
+    <div class="all_products_section">
+        {{#each artigos_de_decoracao}}
+        <div class="products_sections_home">
+            <a class="link_product">
+                <div class="product-box">
+                    <img src="/img/products/product_{{idProduto}}.png" alt="Imagem do Produto 1">
+                    <div>
+                        <h2>{{nomeProduto}} <br> {{descricao}}</h2>
+                        <p class="estoque">{{qntdestoque}} Produtos em estoque</p>
+                        <h2 class="preco">R$ {{valorunidade}}</h2>
+                        <p class="frete">Frete Grátis</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{else}}
+        <h4>Nenhum produto de decoração adicionado...</h4>
+        {{/each}}
+    </div>
+</section>
+
+<section class="sections-home">
+    <h1 id="presentes-personalizados">Presentes personalizados: </h1>
+    <div class="all_products_section">
+        {{#each presentes_personalizados}}
+        <div class="products_sections_home">
+            <a class="link_product">
+                <div class="product-box">
+                    <img src="/img/products/product_{{idProduto}}.png" alt="Imagem do Produto 1">
+                    <div>
+                        <h2>{{nomeProduto}} <br> {{descricao}}</h2>
+                        <p class="estoque">{{qntdestoque}} Produtos em estoque</p>
+                        <h2 class="preco">R$ {{valorunidade}}</h2>
+                        <p class="frete">Frete Grátis</p>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{else}}
+        <h4>Nenhum produto de decoração adicionado...</h4>
+        {{/each}}
+    </div>
+</section>
+
+<style>
+    .hideElement {
+        display: none;
+    }
+</style>
+
+<script>
+    let carrinhoFull = document.querySelectorAll(".carrinho_full");
+    let carrinhoVazio = document.querySelectorAll(".carrinho_vazio");
+
+    let coracaoFull = document.querySelectorAll(".favorito_full");
+    let coracaoVazio = document.querySelectorAll(".favorito_vazio");
+
+    const toggleModal = (el, el2) => {
+        el.classList.toggle("hideElement");
+        el2.classList.toggle("hideElement");
+    };
+
+    carrinhoVazio.forEach((el) => {
+        let el2 = el.nextElementSibling;
+        el.addEventListener("click", () => toggleModal(el, el2));
+    });
+
+    carrinhoFull.forEach((el) => {
+        let el2 = el.previousElementSibling;
+        el.addEventListener("click", () => toggleModal(el, el2));
+    });
+
+    coracaoVazio.forEach((el) => {
+        let el2 = el.nextElementSibling;
+        el.addEventListener("click", () => toggleModal(el, el2));
+    });
+
+    coracaoFull.forEach((el) => {
+        let el2 = el.previousElementSibling;
+        el.addEventListener("click", () => toggleModal(el, el2));
+    });
+
+    async function addCarrinho(item) {
+        console.log("teste")
+    }
+
+
+    function addFavorito(item) {
+
+    }
+</script>

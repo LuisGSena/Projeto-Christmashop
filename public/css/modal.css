@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+.edit-product-form input{
+    border: 1px solid black;
+    border-radius: 1em;
+    width: 20em;
+    height: 3em;
+    padding-left:1em;
+    font-size: 1em;
+}
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 45em;
+    height: 33em;
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+  }  
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+#fade,
+#modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+  
+  
+  
+.modal-body p {
+    margin-bottom: 1rem;
+}
+  
+  #modal.hide,
+  #fade.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #modal.hide {
+    top: 0;
+  }
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-header h2{
+    margin: 0 auto;
+}
+
+#close-modal{
+    bottom: 1em;
+    width: 1.5em;
+}
+#close-modal-delete{
+    bottom: 1em;
+    width: 1.5em;
+}
+.modal-body{
+    display: flex;
+    justify-content: space-between;
+}
+.edit-product-form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.edit-product {
+    display: flex;
+}
+
+.edit-product-upload {
+    width: 50%;
+    margin-right: 10em; /* Espaço entre a imagem e o formulário */
+}
+.edit-product-upload img {
+    width: 10em;
+}
+
+.edit-product-form {
+    flex: 1; /* Para ocupar o espaço restante ao lado da imagem */
+}
+.edit-product-save{
+    margin-left: 3.5em;
+    margin-top: 1em;
+    background-color: #d1111e;
+    border: 0px solid black;
+    width: 12em;
+    height: 2.5em;
+    border-radius: 1em;
+    color: white;
+    font-size: 1em;
+
+}
+
+#modal select{
+    width: 20em;
+    padding: 1em;
+    border-radius:1.1em;
+}
+
+#modalDelete select{
+    width: 20em;
+    padding: 1em;
+    border-radius:1.1em;
+}
+
+#modalDelete {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 45em;
+    height: 35em;
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+  }  
+#fadeDelete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+#fadeDelete,
+#modalDelete {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+  
+  
+  #modalDelete.hideDelete,
+  #fadeDelete.hideDelete {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #modalDelete.hideDelete {
+    top: 0;
+  }

@@ -1,0 +1,29 @@
+<div class="new-product-container">
+    {{>_navbarAdmin}}
+    <section class="new-product-home-admin">
+        <h1>Adicione o produto</h1>
+        <div class="card-new-product">
+            <div class="image-new-product">
+                <img src="/img/foto.png" alt="camera png">
+            </div>
+            <form action="/admin/add-produto" class="new-product-form" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome">
+                <label for="descricao">Descrição:</label>
+                <input type="text" name="descricao">
+                <label for="quantidade">Quantidade:</label>
+                <input type="text" name="quantidade">
+                <label for="categoria">Categoria:</label>
+                <select name="categoria" id="categoria">
+                    <option value="Presentes">Presentes</option>
+                    <option value="Decoração">Decoração</option>
+                    <option value="Cartões de Natal">Cartões de Natal</option>
+                </select>
+                <label for="valor">Valor:</label>
+                <input type="text" name="valor">
+                <button type="submit" class="new-product-save">adicionar</button>
+            </form>
+
+        </div>
+    </section>
+</div>

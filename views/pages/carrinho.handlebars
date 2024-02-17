@@ -1,0 +1,37 @@
+<div class="allProductsMainCarrinho">
+    <section id="allProductsCarrinho">
+        <div id="infoProductsCarrinho">
+            <input type="checkbox" name="check-carrinho" id="carrinho-check">
+            <h5>Todos os itens</h5>
+            <div id="details_infoProductsCarrinho">
+                <img src="/img/carrinho-preto.png" alt="carrinho-preto">
+            </div>
+        </div>
+        <div id="allProductsFromDatabaseCarrinho">
+            {{#each allProducts}}
+            <div class="product-item-from-databaseCarrinho">
+                <div class="product-item-imgCarrinho">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: .5em;">
+                        <img src="/img/editar-icon.png"
+                            onclick="preencherFormulario({idProduto: '{{idProduto}}', nomeProduto: '{{nomeProduto}}', descricao: '{{descricao}}', qntdestoque: '{{qntdestoque}}', valorunidade: '{{valorunidade}}'})"
+                            class="open-modal" alt="Foto de edição">
+                        <img src="/img/remover-icon.png"
+                            onclick="preencherFormulario({idProduto: '{{idProduto}}', nomeProduto: '{{nomeProduto}}', descricao: '{{descricao}}', qntdestoque: '{{qntdestoque}}', valorunidade: '{{valorunidade}}'})"
+                            class="open-modal-delete" alt="Foto de remoção">
+                    </div>
+                    <img src="/img/arvore.png" alt="Foto de Árvore de Natal">
+                </div>
+                <div class="product-item-name-descCarrinho">
+                    <h3>{{nomeProduto}}</h3>
+                    <h5>{{descricao}}</h5>
+                    <h5>R$ {{valorunidade}}</h5>
+                </div>
+                <div class="product-item-value-qntdCarrinho">
+                    <input type="number" name="quantidade" id="qntdEstoque" style="border-radius: 1em;">
+                </div>
+            </div>
+            {{else}}
+            <h1>Nenhum produto cadastrado no momento...</h1>
+            {{/each}}
+        </div>
+    </section>

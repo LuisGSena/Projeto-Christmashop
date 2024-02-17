@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #E9E9E9;
+}
+
+#header-home {
+    background-color: #BC1823;
+    display: flex;
+    justify-content: center;
+    height: 30em;
+}
+
+#header-home div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8em;
+}
+
+#feliz_natal_home {
+    width: 40em;
+}
+
+#women_gift_home {
+    height: 100%;
+}
+
+.all_products_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.sections-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block: 3em;
+    gap: 2em;
+}
+
+.sections-home h1{
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.link_product{
+    text-decoration: none;
+    color: black;
+}
+
+.product-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.1em;
+    padding: .8em;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    height: 25em;
+    width: 18em;
+}
+
+.product-box img {
+    width: 10em;
+}
+
+.product-box div h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.product-box div .estoque {
+    font-size: .9em;
+    color: #3e3e3e;
+    font-weight: 600;
+}
+
+.product-box div .preco {
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+.product-box div .frete {
+    font-size: 1em;
+    color: #BC1823;
+    font-weight: 600;
+}
+
+#gift_who_tou_love_home {
+    color: white;
+    background-color: #A1131D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 2.2em;
+    height: 10em;
+}
+
+#gift_who_tou_love_home h1{
+    font-size: 2.3em;
+    font-weight: 600;
+}
+
+#gift_who_tou_love_home img{
+    width: 10em;
+}
+
+#personalized_home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 3em;
+}
+
+#couple_image_home {
+    height: 45em;
+}
+
+#personalizados_home {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5em;
+}
+
+#personalizados_home h1{
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+#items_personalized_section {
+    width: 83%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
+#descount_home {
+    background-color: #A1131D;
+    display: flex;
+    justify-content: space-between;
+    gap: 5em;
+    height: 32em;
+    margin-top: 2.5em;
+}
+
+#girl_descount {
+    margin-left: 8em;
+}
+
+#descount_home_img {
+    height: 100%;
+}
+
+#header-home-logado{
+    width: 100%;
+    height: 25em;
+    background: url('/img/oferta.png');
+    background-size: cover;
+}

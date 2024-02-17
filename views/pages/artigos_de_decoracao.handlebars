@@ -1,0 +1,24 @@
+<header id="header_presentes_personalizados">
+    <h1>Artigos de Decoração</h1>
+    <img id="couple_image" src="/img/artigos_de_decoracao/image_header.png" alt="Imagem de um homem subindo uma escada.">
+</header>
+
+<section id="all_products_presentes_personalizados">
+    {{#each artigos_de_decoracao}}
+    <div class="products_sections_home">
+        <a class="link_product" href="/login">
+            <div class="product-box">
+                <img src="/img/products/product_{{idProduto}}.png" alt="Imagem do Produto {{ìdProduto}}">
+                <div>
+                    <h2>{{nomeProduto}} <br> {{descricao}}</h2>
+                    <p class="estoque">{{qntdestoque}} Produtos em estoque</p>
+                    <h2 class="preco">R$ {{valorunidade}}</h2>
+                    <p class="frete">Frete Grátis</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    {{else}}
+    <h4>Nenhum artigo de decoração foi encontrado...</h4>
+    {{/each}}
+</section>

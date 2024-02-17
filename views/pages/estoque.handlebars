@@ -1,0 +1,59 @@
+<div class="new-product-container-main">
+    {{>_navbarAdmin}}
+    <section id="main-content">
+        <div class="info-prod">
+            <div class="text-produto">
+                <h5>Produto</h5>
+            </div>
+            <div class="flex-container">
+                <h5>Valor</h5>
+                <h5>Quantidade</h5>
+            </div>
+        </div>
+        <div id="produtos">
+            <div id="images-produtos-admin">
+                <img src="/img/editar-icon.png" onclick="" id="open-modal" class="icon-editar" alt="Icone de editar">
+
+                <img src="/img/arvore.png" id="tree-icon" alt="Arvore Icon">
+            </div>
+            <div class="content-produtos">
+                <p>Árvore De Natal Pinheiro 1,50 M 150 Cm Hv 420 Galhos</p>
+                <div class="valores-produto">
+                    <h3 id="values-prod">R$ 1000,00</h3>
+                    <h3 id="quanti-prod">100</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div id="fade" class="hide"></div>
+<div id="modal" class="hide">
+    <div class="modal-header">
+        <h2>Editar Produto</h2>
+        <img src="/img/marca-x.png" id="close-modal">
+    </div>
+    <div class="modal-body">
+        <div class="edit-product">
+            <div class="edit-product-upload">
+                <div class="edit-img-upload">
+                    <img src="img/arvore.png" alt="">
+                    <p style="text-align: center;">arvore de natal</p>
+                </div>
+            </div>
+            <div>
+                <form action="" class="edit-product-form">
+                    <label for="name-edit">Nome:</label>
+                    <input type="text" id="name-edit">
+                    <label for="descricao-edit">Descrição:</label>
+                    <input type="text" id="descricao-edit">
+                    <label for="quantidade-edit">Quantidade:</label>
+                    <input type="number" id="quantidade-edit">
+                    <label for="valor-edit">Valor:</label>
+                    <input type="text" id="valor-edit">
+                    <button type="submit" class="edit-product-save">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

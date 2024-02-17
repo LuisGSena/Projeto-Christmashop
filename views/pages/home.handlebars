@@ -1,0 +1,86 @@
+<header id="header-home">
+    <div>
+        <img id="feliz_natal_home" src="/img/home/feliz_natal_home.png" alt="Imagem de Feliz Natal">
+        <img id="women_gift_home" src="/img/home/women_gift_home.png"
+            alt="Imagem de uma mulher segurando um presente natalino.">
+    </div>
+</header>
+<section class="sections-home">
+    <h1>Decore a sua casa: </h1>
+    <div class="all_products_section">
+        {{#each produtos_decoracao}}
+        <div class="products_sections_home">
+            <a class="link_product" href="/login">
+                <div class="product-box">
+                    <img src="/img/products/product_{{idProduto}}.png" alt="Imagem do Produto 1">
+                    <div>
+                        <h2>{{nomeProduto}} <br> {{descricao}}</h2>
+                        <p class="estoque">{{qntdestoque}} Produtos em estoque</p>
+                        <h2 class="preco">R$ {{valorunidade}}</h2>
+                        <p class="frete">Frete Grátis</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{else}}
+        <h4>Nenhum produto de decoração adicionado...</h4>
+        {{/each}}
+    </div>
+</section>
+
+<section id="gift_who_tou_love_home">
+    <img src="/img/home/gift_who_tou_love_home.png" alt="Imagem de Presentes">
+    <h1>Presenteie quem você ama!</h1>
+</section>
+
+<section id="personalized_home">
+    <img id="couple_image_home" src="/img/home/couple.png" alt="Imagem de Casal">
+    <div id="personalizados_home">
+        <h1>Personalizados: </h1>
+        <div id="items_personalized_section">
+            {{#each produtos_personalizados}}
+                <a class="link_product" href="/login">
+                    <div class="product-box">
+                        <img src="/img/products/product_{{idProduto}}.png" alt="Imagem do Produto {{idProduto}}">
+                        <div>
+                            <h2>{{nomeProduto}} <br> {{descricao}}</h2>
+                            <p class="estoque">{{qntdestoque}} Produtos em estoque</p>
+                            <h2 class="preco">R$ {{valorunidade}}</h2>
+                            <p class="frete">Frete Grátis</p>
+                        </div>
+                    </div>
+                </a>
+            {{else}}
+                <h4>Nenhum produto personalizado foi encontrado...</h4>
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+<section id="descount_home">
+    <img id="girl_descount" src="/img/home/girl_descount.png" alt="Imagem de uma garota dando legal.">
+    <img id="descount_home_img" src="/img/home/descount_home.png" alt="Imagem de um desconto.">
+</section>
+
+<section class="sections-home">
+    <h1>Produtos mais vendidos: </h1>
+    <div class="all_products_section">
+        {{#each produtos_decoracao}}
+        <div class="products_sections_home">
+            <a class="link_product" href="/login">
+                <div class="product-box">
+                    <img src="/img/products/product_{{idProduto}}.png" alt="Imagem do Produto 1">
+                    <div>
+                        <h2>{{nomeProduto}} <br> {{descricao}}</h2>
+                        <p class="estoque">{{qntdestoque}} Produtos em estoque</p>
+                        <h2 class="preco">R$ {{valorunidade}}</h2>
+                        <p class="frete">Frete Grátis</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{else}}
+        <h4>Nenhum produto de decoração adicionado...</h4>
+        {{/each}}
+    </div>
+</section>
